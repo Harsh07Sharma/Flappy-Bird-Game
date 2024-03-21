@@ -42,9 +42,6 @@ window.onload = function () {
   board.width = boardWidth;
   context = board.getContext("2d"); //used for drawing on the board
 
-  //draw flappy bird
-  // context.fillStyle = "green";
-  // context.fillRect(bird.x, bird.y, bird.width, bird.height);
 
   //load images
   birdImg = new Image();
@@ -73,7 +70,6 @@ function update() {
 
   //bird
   velocityY += gravity;
-  // bird.y += velocityY;
   bird.y = Math.max(bird.y + velocityY, 0); //apply gravity to current bird.y, limit the bird.y to top of the canvas
   context.drawImage(birdImg, bird.x, bird.y, bird.width, bird.height);
 
